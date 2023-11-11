@@ -44,9 +44,12 @@ public class PlayerMovement : MonoBehaviour
 
         movementSpeed = ctrlKeyIsPressed ? runningSpeed : walkSpeed;
 
-        UpdateMovement();
-        
-        animator.SetInteger("animationState", UpdateAnimations());
+        if (rb.bodyType != RigidbodyType2D.Static)
+        {
+            UpdateMovement();
+
+            animator.SetInteger("animationState", UpdateAnimations());
+        }
     }
 
     void UpdateMovement()
