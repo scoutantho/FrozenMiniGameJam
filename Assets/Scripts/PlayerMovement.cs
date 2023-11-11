@@ -36,11 +36,14 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftControl))
+        if (Input.GetKey(KeyCode.LeftControl))
         {
             ctrlKeyIsPressed = true;
         }
-        else { ctrlKeyIsPressed = false; }
+        else
+        {
+            ctrlKeyIsPressed = false;
+        }
 
         movementSpeed = ctrlKeyIsPressed ? runningSpeed : walkSpeed;
 
