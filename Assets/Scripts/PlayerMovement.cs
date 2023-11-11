@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -20,9 +21,6 @@ public class PlayerMovement : MonoBehaviour
 
     bool ctrlKeyIsPressed = false;
     bool isMoving = false;
-
-    //Animation condition
-    bool isDead = false;
 
     private enum AnimationState { idle, running, walking, jumping, falling, climbing, rolling }
 
@@ -47,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         movementSpeed = ctrlKeyIsPressed ? runningSpeed : walkSpeed;
 
         UpdateMovement();
+        
         animator.SetInteger("animationState", UpdateAnimations());
     }
 
