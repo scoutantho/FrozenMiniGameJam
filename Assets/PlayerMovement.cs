@@ -7,7 +7,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private SpriteRenderer Sprite;
     private Animator animator;
+    private BoxCollider2D boxCollider;
     [SerializeField]
+    private LayerMask jumpableGround;
+
     float dirX;
     bool flipX = false;
     float movementSpeed;
@@ -29,27 +32,33 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         Sprite = GetComponent<SpriteRenderer>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        movementSpeed = ctrlKeyIsPressed ? runningSpeed : walkSpeed;
-        UpdateMovement();
-
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            ctrlKeyIsPressed = true;
         }
+        else { ctrlKeyIsPressed = false; }
 
+        movementSpeed = ctrlKeyIsPressed ? runningSpeed : walkSpeed;
 
+        UpdateMovement();
         animator.SetInteger("animationState", UpdateAnimations());
     }
 
     void UpdateMovement()
     {
         dirX = Input.GetAxisRaw("Horizontal");
-        rb.velocity = new Vector2(dirX * 7f, rb.velocity.y);
+        rb.velocity = new Vector2(dirX * movementSpeed, rb.velocity.y);
+
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        }
 
         if (dirX < 0f)
         {
@@ -89,5 +98,10 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return (int)state;
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 1f, jumpableGround);
     }
 }
