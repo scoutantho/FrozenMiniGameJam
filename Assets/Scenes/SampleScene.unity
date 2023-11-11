@@ -2019,8 +2019,8 @@ Tilemap:
   - first: {x: 9, y: -2, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 12
-      m_TileSpriteIndex: 5
+      m_TileIndex: 1
+      m_TileSpriteIndex: 19
       m_TileMatrixIndex: 0
       m_TileColorIndex: 9
       m_TileObjectToInstantiateIndex: 65535
@@ -3080,7 +3080,7 @@ Tilemap:
   m_TileAssetArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: 11400000, guid: 15af13e91ff2d7a48b7fb8cf3172673f, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -3102,7 +3102,7 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: bf1bad4b699fa744cbe5c48ffe5db562, type: 2}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 209
+  - m_RefCount: 208
     m_Data: {fileID: 11400000, guid: 93a2caebc713c0e40a6cc2d054c3bac3, type: 2}
   - m_RefCount: 5
     m_Data: {fileID: 11400000, guid: 3a324faa2fae4834ea460aa1f3e54774, type: 2}
@@ -3125,7 +3125,7 @@ Tilemap:
     m_Data: {fileID: 6328164940369298098, guid: 7176edf8b0389e74f89300594e73c7cb, type: 3}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 209
+  - m_RefCount: 208
     m_Data: {fileID: -6883525179852715705, guid: 7176edf8b0389e74f89300594e73c7cb, type: 3}
   - m_RefCount: 3
     m_Data: {fileID: 168055163509954808, guid: 7176edf8b0389e74f89300594e73c7cb, type: 3}
@@ -3153,7 +3153,7 @@ Tilemap:
     m_Data: {fileID: -4843205090182023274, guid: 7176edf8b0389e74f89300594e73c7cb, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: -6678589591376429285, guid: 7176edf8b0389e74f89300594e73c7cb, type: 3}
-  - m_RefCount: 2
+  - m_RefCount: 3
     m_Data: {fileID: -3949252040154449062, guid: 7176edf8b0389e74f89300594e73c7cb, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 266
@@ -4478,6 +4478,7 @@ GameObject:
   - component: {fileID: 1512139596}
   - component: {fileID: 1512139595}
   - component: {fileID: 1512139599}
+  - component: {fileID: 1512139600}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4637,6 +4638,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56829daa0694c704a87b4131b5deb774, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1512139600
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512139594}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 20c499247103c7848a6707438023d20b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &2109895604
 GameObject:
   m_ObjectHideFlags: 0
