@@ -14,7 +14,7 @@ public class MenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Music").GetComponent<GameMusic>().PlayMusic();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<GameMusic>();
     }
 
     public void StartGame()
