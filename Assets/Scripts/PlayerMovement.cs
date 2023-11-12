@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
     bool flipX = false;
     float movementSpeed;
     float walkSpeed = 7f;
-    float runningSpeed = 10f;
+    float runningSpeed = 15f;
     float jumpForce = 14f;
 
     bool ctrlKeyIsPressed = false;

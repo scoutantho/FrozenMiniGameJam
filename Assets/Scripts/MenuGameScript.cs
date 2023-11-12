@@ -34,7 +34,7 @@ public class MenuGameScript : MonoBehaviour
     public void YesButton()
     {
         IsOpen = false;
-        SceneManager.LoadScene(SceneManager.GetSceneByName("StartScene").name);
+        SceneManager.LoadScene(0);
     }
     public void NoButton()
     {

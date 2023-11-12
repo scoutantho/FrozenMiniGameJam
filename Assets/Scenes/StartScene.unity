@@ -3556,6 +3556,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvaQuit
       objectReference: {fileID: 0}
+    - target: {fileID: 6714962344870385192, guid: d3eb41f7290a1684eb6c5fa575654b3b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8607410967841590459, guid: d3eb41f7290a1684eb6c5fa575654b3b, type: 3}
       propertyPath: m_Camera
       value: 
