@@ -510,8 +510,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187.20615, y: -121.68}
-  m_SizeDelta: {x: 22.7702, y: 3.7734}
+  m_AnchoredPosition: {x: -180.5, y: -121.68}
+  m_SizeDelta: {x: 28.6613, y: 3.7734}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &241444623
 MonoBehaviour:
@@ -533,7 +533,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "I told you... \nHold R to restart the level"
+  m_text: 'I told you to not run that fast
+
+    Hold R to restart the level'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9e1a0f0bf23a3c49be616221b33b652, type: 2}
   m_sharedMaterial: {fileID: 9137560299867634199, guid: d9e1a0f0bf23a3c49be616221b33b652, type: 2}

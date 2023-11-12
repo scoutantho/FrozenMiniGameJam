@@ -46,7 +46,11 @@ public class Finish : MonoBehaviour
             {
                 IsEntranceStillStanding = false;
                 animator.SetTrigger("IsDestroyed");
-                if(toldYou != null) toldYou.SetActive(true);
+                if (toldYou != null)
+                {
+                    toldYou.SetActive(true);
+                    enterDoor.SetActive(false);
+                }
             }
             IsInDoorFrame = true;
         }
