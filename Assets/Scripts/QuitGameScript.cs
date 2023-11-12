@@ -22,7 +22,7 @@ public class QuitGameScript : MonoBehaviour
 
     public void YesButton()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        //UnityEditor.EditorApplication.isPlaying = false;
         Application.Quit();
     }
     public void NoButton()
