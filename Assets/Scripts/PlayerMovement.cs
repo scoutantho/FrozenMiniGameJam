@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer Sprite;
     private Animator animator;
     private BoxCollider2D boxCollider;
-    private float timePressed = 0f;
     [SerializeField]
     private LayerMask jumpableGround;
 
@@ -23,7 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     bool ctrlKeyIsPressed = false;
     bool isMoving = false;
-
+    private bool keyHeld = false;
+    private float startTime;
     private enum AnimationState { idle, running, walking, jumping, falling, climbing, rolling }
 
     // Start is called before the first frame update
@@ -117,19 +117,41 @@ public class PlayerMovement : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            timePressed = Time.time;
+            keyHeld = true;
+            startTime = Time.time;
         }
 
+        // Check if the key is still held down after 4 seconds
+        if (keyHeld && Time.time - startTime >= 3f)
+        {
+            // Do something here after 4 seconds of holding the key
+            //Debug.Log("Key held for 4 seconds!");
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            // Reset the keyHeld flag to prevent continuous execution
+            keyHeld = false;
+        }
+
+        // Check if the key is released
         if (Input.GetKeyUp(KeyCode.R))
         {
-            timePressed = Time.time - timePressed;
-            if (timePressed > 3f)
-            {
-                timePressed = 0f;
-                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            }
-            Debug.Log("Pressed for : " + timePressed + " Seconds");
+            keyHeld = false;
         }
+        //if (Input.GetKey(KeyCode.R))
+        //{
+        //    //timePressed = Time.time;
+        //}
+
+        //do reset after R is Up and 3 seconds
+        //if (Input.GetKeyUp(KeyCode.R))
+        //{
+        //    timePressed = Time.time - timePressed;
+        //    if (timePressed > 3f)
+        //    {
+        //        timePressed = 0f;
+        //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        //    }
+        //    Debug.Log("Pressed for : " + timePressed + " Seconds");
+        //}
 
 
     }
