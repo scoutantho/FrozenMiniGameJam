@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer Sprite;
     private Animator animator;
     private BoxCollider2D boxCollider;
+    private float timePressed = 0f;
     [SerializeField]
     private LayerMask jumpableGround;
 
@@ -36,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        keyPressedTimer();
+
         if (Input.GetKey(KeyCode.LeftControl))
         {
             ctrlKeyIsPressed = true;
@@ -108,5 +112,25 @@ public class PlayerMovement : MonoBehaviour
     private bool IsGrounded()
     {
         return Physics2D.BoxCast(boxCollider.bounds.center, boxCollider.bounds.size, 0f, Vector2.down, 1f, jumpableGround);
+    }
+    void keyPressedTimer()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            timePressed = Time.time;
+        }
+
+        if (Input.GetKeyUp(KeyCode.R))
+        {
+            timePressed = Time.time - timePressed;
+            if (timePressed > 3f)
+            {
+                timePressed = 0f;
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+            Debug.Log("Pressed for : " + timePressed + " Seconds");
+        }
+
+
     }
 }

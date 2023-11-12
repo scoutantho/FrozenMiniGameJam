@@ -19,7 +19,7 @@ public class Finish : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log($"Entrance is still standing : {IsEntranceStillStanding} and player is in door frame : {IsInDoorFrame}");
+        //Debug.Log($"Entrance is still standing : {IsEntranceStillStanding} and player is in door frame : {IsInDoorFrame}");
         if (IsInDoorFrame && IsEntranceStillStanding && !NextLevelLoading)
         {
             if (Input.GetAxisRaw("Vertical") >= 0.1f)
@@ -45,7 +45,7 @@ public class Finish : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("^Player leave door frame");
+        Debug.Log("Player leave door frame");
         if (collision.gameObject.CompareTag("Player"))
         {
             IsInDoorFrame = false;
