@@ -8181,7 +8181,7 @@ GameObject:
   - component: {fileID: 880644188}
   - component: {fileID: 880644189}
   m_Layer: 0
-  m_Name: Spike
+  m_Name: SpikeColider
   m_TagString: Spike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8281,8 +8281,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -249.13, y: -116.14}
-  m_SizeDelta: {x: 14.7579, y: 2.1709}
+  m_AnchoredPosition: {x: -248.75, y: -116.14}
+  m_SizeDelta: {x: 15.52, y: 2.1709}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890587584
 MonoBehaviour:
@@ -8304,7 +8304,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "ad to move \n(qd if azerty)"
+  m_text: "a/d to move \n(q/d if azerty)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9e1a0f0bf23a3c49be616221b33b652, type: 2}
   m_sharedMaterial: {fileID: 9137560299867634199, guid: d9e1a0f0bf23a3c49be616221b33b652, type: 2}
@@ -9549,42 +9549,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1021637784818369906, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1202443228728680843, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1202443228728680843, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_PlaneDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957350175695385709, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1957350175695385709, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_PlaneDistance
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560688804849217278, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3560688804849217278, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 4057458426030832610, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -37.800003
-      objectReference: {fileID: 0}
-    - target: {fileID: 4057458426030832610, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -27.699997
-      objectReference: {fileID: 0}
     - target: {fileID: 4943231257467108863, guid: 484ebe3071505474696309ed3392d7f9, type: 3}
       propertyPath: m_Name
       value: Player

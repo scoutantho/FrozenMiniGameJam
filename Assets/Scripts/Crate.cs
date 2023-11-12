@@ -9,6 +9,12 @@ public class Crate : MonoBehaviour
     private bool IsInFrame = false;
     private bool IsAlreadyLooted = false;
 
+    [SerializeField]
+    private GameObject StopBreakIt;
+    
+    [SerializeField]
+    private GameObject GetASword;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,6 +31,7 @@ public class Crate : MonoBehaviour
                 //finishSound.Play();
                 IsAlreadyLooted = true;
                 Invoke("OptainSword", 0.1f);
+                GetASword.SetActive(true);
             }
         }
     }
@@ -36,6 +43,7 @@ public class Crate : MonoBehaviour
             {
                 IsCrateStillStanding = false;
                 animator.SetTrigger("IsDestroyed");
+                StopBreakIt.SetActive(true);
             }
             IsInFrame = true;
         }

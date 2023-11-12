@@ -16,6 +16,7 @@ public class Finish : MonoBehaviour
     private GameObject toldYou;
     [SerializeField]
     private GameObject enterDoor;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,7 +28,7 @@ public class Finish : MonoBehaviour
         //Debug.Log($"Entrance is still standing : {IsEntranceStillStanding} and player is in door frame : {IsInDoorFrame}");
         if (IsInDoorFrame && IsEntranceStillStanding && !NextLevelLoading)
         {
-            enterDoor.SetActive(true);
+           if (enterDoor != null) enterDoor.SetActive(true);
             if (Input.GetAxisRaw("Vertical") >= 0.1f)
             {
                 //finishSound.Play();
@@ -45,7 +46,7 @@ public class Finish : MonoBehaviour
             {
                 IsEntranceStillStanding = false;
                 animator.SetTrigger("IsDestroyed");
-                toldYou.SetActive(true);
+                if(toldYou != null) toldYou.SetActive(true);
             }
             IsInDoorFrame = true;
         }
