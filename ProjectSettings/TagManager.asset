@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spike
+  - Music
+  - QuitGame
   layers:
   - Default
   - TransparentFX

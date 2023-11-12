@@ -1,24 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    [SerializeField]
+    private GameObject CanvaCredit;
+    [SerializeField]
+    private GameObject CanvaButton;
+    [SerializeField]
+    private GameObject CanvaQuit;
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<GameMusic>().PlayMusic();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void StartGame()
     {
-        if (Input.GetKey(KeyCode.Space))
-        {
-            rb.bodyType = RigidbodyType2D.Dynamic;
-            rb.constraints = RigidbodyConstraints2D.None;
-            rb.velocity = new Vector2(0, -0.1f);
-        }
+        SceneManager.LoadScene(1);
+    }
+    public void ClickQuit()
+    {
+        CanvaQuit.GetComponent<QuitGameScript>().OpenMenu();
+    }
+    public void StartCredit()
+    {
+        CanvaButton.SetActive(false);
+        CanvaCredit.SetActive(true);
+    }
+    public void CloseCredit()
+    {
+        CanvaCredit.SetActive(false);
+        CanvaButton.SetActive(true);
     }
 }
