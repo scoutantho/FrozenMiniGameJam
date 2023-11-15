@@ -399,7 +399,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Press "a" or "q" to enter next level
+  m_text: Press "z" or "w" to enter next level
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d9e1a0f0bf23a3c49be616221b33b652, type: 2}
   m_sharedMaterial: {fileID: 9137560299867634199, guid: d9e1a0f0bf23a3c49be616221b33b652, type: 2}
