@@ -5,39 +5,27 @@ using UnityEngine.SceneManagement;
 
 public class MenuGameScript : MonoBehaviour
 {
-    bool IsOpen = false;
+    public GameObject CanvaMenu;
+
+    void Update()
+    {
+        if (Input.GetKeyUp(KeyCode.Escape))
+        {
+            CanvaMenu.gameObject.SetActive(!CanvaMenu.gameObject.activeSelf);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
+        CanvaMenu.gameObject.SetActive(false);
     }
 
-    public void OpenMenu()
+    public static void YesButton()
     {
-        if (IsOpen)
-        {
-            CloseMenu();
-        }
-        else
-        {
-            IsOpen = true;
-            this.gameObject.SetActive(true);
-        }
-    }
-
-    public void CloseMenu()
-    {
-        IsOpen= false;
-        this.gameObject.SetActive(false);
-    }
-
-    public void YesButton()
-    {
-        IsOpen = false;
         SceneManager.LoadScene(0);
     }
     public void NoButton()
     {
-        CloseMenu();
+        CanvaMenu.gameObject.SetActive(!CanvaMenu.gameObject.activeSelf);
     }
 }
