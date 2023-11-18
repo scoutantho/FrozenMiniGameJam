@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Finish : MonoBehaviour
 {
-    private AudioSource finishSound;
+    private AudioSource enterSound;
     private Animator animator;
     private bool IsEntranceStillStanding = true;
     private bool IsInDoorFrame = false;
@@ -20,7 +20,7 @@ public class Finish : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        finishSound = GetComponent<AudioSource>();
+        enterSound = GetComponent<AudioSource>();
         animator = GetComponent<Animator>();
     }
     private void Update()

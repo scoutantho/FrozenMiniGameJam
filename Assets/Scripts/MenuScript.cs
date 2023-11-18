@@ -23,7 +23,7 @@ public class MenuScript : MonoBehaviour
     }
     public void ClickQuit()
     {
-        CanvaQuit.GetComponent<QuitGameScript>().OpenMenu();
+       CanvaQuit.SetActive(true);
     }
     public void StartCredit()
     {

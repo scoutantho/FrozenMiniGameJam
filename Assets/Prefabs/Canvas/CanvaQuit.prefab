@@ -599,7 +599,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1709185419614215022}
+      - m_Target: {fileID: 8010148265351320196}
         m_TargetAssemblyTypeName: QuitGameScript, Assembly-CSharp
         m_MethodName: NoButton
         m_Mode: 1
@@ -732,9 +732,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1709185419614215022}
+      - m_Target: {fileID: 8010148265351320196}
         m_TargetAssemblyTypeName: QuitGameScript, Assembly-CSharp
-        m_MethodName: CloseMenu
+        m_MethodName: Menu
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -890,7 +890,7 @@ GameObject:
   - component: {fileID: 8607410967841590459}
   - component: {fileID: 6721289133952511995}
   - component: {fileID: 6314746102194370628}
-  - component: {fileID: 1709185419614215022}
+  - component: {fileID: 8010148265351320196}
   m_Layer: 0
   m_Name: CanvaQuit
   m_TagString: QuitGame
@@ -981,7 +981,7 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &1709185419614215022
+--- !u!114 &8010148265351320196
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1114,7 +1114,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1709185419614215022}
+      - m_Target: {fileID: 8010148265351320196}
         m_TargetAssemblyTypeName: QuitGameScript, Assembly-CSharp
         m_MethodName: YesButton
         m_Mode: 1

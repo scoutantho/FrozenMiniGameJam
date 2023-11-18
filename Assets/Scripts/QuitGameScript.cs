@@ -7,17 +7,12 @@ public class QuitGameScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        this.gameObject.SetActive(false);
+        //this.gameObject.SetActive(false);
     }
 
-    public void OpenMenu()
+    public void Menu()
     {       
-        this.gameObject.SetActive(true);
-    }
-
-    public void CloseMenu()
-    {
-        this.gameObject.SetActive(false);
+        this.gameObject.SetActive(!this.gameObject.activeSelf);
     }
 
     public void YesButton()
@@ -27,6 +22,6 @@ public class QuitGameScript : MonoBehaviour
     }
     public void NoButton()
     {
-        CloseMenu();
+        Menu();
     }
 }
