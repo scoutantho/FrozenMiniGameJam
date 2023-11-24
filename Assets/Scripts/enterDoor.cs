@@ -5,9 +5,12 @@ using UnityEngine.Assertions.Must;
 using UnityEngine.SceneManagement;
 
 public enum ThingsToDo
-{
-    sceneSettings,
-    LoadCanva
+{    
+    LoadCanva,
+    selectLevelScene,
+    goBackMainScene,
+    loadLevel1,
+    loadLevel2
 }
 public class enterDoor : MonoBehaviour
 {
@@ -68,7 +71,21 @@ public class enterDoor : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene((int)thingsToDo);
+            switch(thingsToDo)
+            {
+                case ThingsToDo.selectLevelScene:
+                    SceneManager.LoadScene("SelectLevel");
+                    break;
+                case ThingsToDo.goBackMainScene:
+                    SceneManager.LoadScene("MainMenu");
+                    break;
+                case ThingsToDo.loadLevel1:
+                    SceneManager.LoadScene("Scene1");
+                    break;
+                case ThingsToDo.loadLevel2:
+                    SceneManager.LoadScene("Scene2");
+                    break;
+            }
         }
         NextLevelLoading = false;
     }
